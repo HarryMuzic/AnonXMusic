@@ -32,10 +32,9 @@ UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 # 🔥 SUPPORT SETTINGS
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "dp_boy_gals")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "system6o")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/dp_boy_gals")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/system6o")
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "system6o")
-AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
 
 # Spotify
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
