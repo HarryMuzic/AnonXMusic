@@ -1,15 +1,16 @@
-FROM python:3.10-slim-bullseye
+FROM python:3.10
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends ffmpeg \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install -y git ffmpeg curl
 
-COPY . /app/
-WORKDIR /app/
+# 🔥 NodeJS install
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+    apt-get install -y nodejs
 
-RUN python3 -m pip install --upgrade pip setuptools
-RUN apt-get update && apt-get install -y git
-RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
+WORKDIR /app
 
-CMD python3 -m AnonXMusic
+COPY . .
+
+RUN pip3 install --no-cache-dir --upgrade -r requirements.txt
+
+CMD ["python3", "-m", "AnonXMusic"]
