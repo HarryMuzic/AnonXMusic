@@ -36,6 +36,8 @@ SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/dp_boy_gals")
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/system6o")
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "system6o")
 
+AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "False") == "True"
+
 # Spotify
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
 SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
